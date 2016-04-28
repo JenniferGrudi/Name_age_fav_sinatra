@@ -20,9 +20,9 @@ post '/favorite_numbers' do
 	favorite_numbers3 = params[:user_favorite_number3]
 	sum = favorite_numbers1.to_i + favorite_numbers2.to_i + favorite_numbers3.to_i
 	if sum < @@age.to_i
-		erb :sum_numbers, :locals => {:sum => sum, :fav1 => favorite_numbers1, :fav2 => favorite_numbers2, :fav3 => favorite_numbers3, :result => "That is less then your age!"}
+		erb :sum_numbers, :locals => {:sum => sum, :fav1 => favorite_numbers1, :fav2 => favorite_numbers2, :fav3 => favorite_numbers3, :result => "That sum is less than your age!"}
 	else
-		erb :sum_numbers, :locals => {:sum => sum, :fav1 => favorite_numbers1, :fav2 => favorite_numbers2, :fav3 => favorite_numbers3, :result => "That is greater then your age!"}
+		erb :sum_numbers, :locals => {:sum => sum, :fav1 => favorite_numbers1, :fav2 => favorite_numbers2, :fav3 => favorite_numbers3, :result => "That sum is greater than your age!"}
 	end		
 end	
 
